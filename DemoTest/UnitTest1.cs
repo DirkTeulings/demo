@@ -1,33 +1,32 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
+using Xunit;
 
 namespace DemoTest
 {
-    [TestClass]
     public class DemoTests
     {
         /// <summary>
         /// is true actually true
         /// </summary>
-        [TestMethod]
+        [Fact]
         public void IsTrueTrue()
         {
-            Assert.IsTrue(true);
+            Assert.True(true);
         }
 
         /// <summary>
         /// is false actually false
         /// </summary>
-        [TestMethod]
+        [Fact]
         public void IsFalseFalse()
         {
-            Assert.IsFalse(false);
+            Assert.False(false);
         }
 
         /// <summary>
         /// wonkey test
         /// </summary>
-        [TestMethod]
+        [Fact]
         public void Wonkey()
         {
             var val = true;
@@ -36,12 +35,12 @@ namespace DemoTest
                 if (!true == !val)
                     if (!false == val)
                     {
-                        Assert.IsTrue(val);
+                        Assert.True(val);
                         return;
                     }
                         
 
-            Assert.IsFalse(val);
+            Assert.False(val);
 
         }
     }

@@ -31,6 +31,3 @@ jobs:
       - name: Build Solution
         run: |
           msbuild.exe Demo.sln /p:platform="Any CPU" /p:configuration="Release"
-        
-      - name: Run Tests
-        run: vstest.console.exe .\demo\DemoTest\bin\Release\DemoTest.dll
